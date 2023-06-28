@@ -8,12 +8,10 @@ export default function MobileWrapper({ children }: PropsWithChildren) {
 const Styled = {
   Root: styled.div`
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     margin: 0 auto;
 
-    width: 36rem;
+    min-width: 37.5rem;
+    height: 81.2rem;
   `,
 };
