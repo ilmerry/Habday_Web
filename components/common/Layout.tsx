@@ -24,17 +24,18 @@ const Styled = {
   Root: styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 100vw;
+    width: 37.5rem;
     height: 100%;
+    background: white;
   `,
   Main: styled.main`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 61.3rem;
+    min-height: 67.2rem;
   `,
   Footer: styled.footer`
     display: flex;
@@ -42,7 +43,7 @@ const Styled = {
     justify-content: center;
     align-items: center;
     width: 100%;
-    bottom: 5.4rem;
+    margin-bottom: 5.4rem;
   `,
   Button: styled.button`
     width: 32rem;

@@ -1,2 +1,2 @@
 // assets
-//export { default as image } from './FILEPATH';
+export { default as AirpodImg } from './Airpod.svg';
