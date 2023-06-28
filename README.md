@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 # Habday_Web
+
 =======
->>>>>>> de146b0 (Chore: created next app)
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+> > > > > > > de146b0 (Chore: created next app)
+> > > > > > > This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -39,6 +38,12 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> 8bbbac6 (Initial commit from Create Next App)
->>>>>>> de146b0 (Chore: created next app)
+
+> > > > > > > 8bbbac6 (Initial commit from Create Next App)
+> > > > > > > de146b0 (Chore: created next app)
+> > > > > > > =======
+
+> > > > > > > 8bbbac6 (Initial commit from Create Next App)
+> > > > > > > 903cbd2 (Fix: readme error)
