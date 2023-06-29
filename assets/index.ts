@@ -1,2 +1,4 @@
 // assets
-//export { default as image } from './FILEPATH';
+export { default as AirpodImg } from './Airpod.svg';
+export { default as PingArrowImg } from './arrow.svg';
+export { default as selectBoxImg } from './selectBox.svg';

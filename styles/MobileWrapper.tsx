@@ -10,10 +10,10 @@ const Styled = {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
 
     margin: 0 auto;
 
-    width: 36rem;
+    min-width: 37.5rem;
+    min-height: 100%;
   `,
 };
