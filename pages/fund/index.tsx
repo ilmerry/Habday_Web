@@ -48,9 +48,9 @@ export default function Fund() {
       </Styled.Form>
       <Styled.Form>
         <Styled.Label>할부개월</Styled.Label>
-        <Styled.Select>
+        <Styled.SelectDisabled>
           <option>일시불</option>
-        </Styled.Select>
+        </Styled.SelectDisabled>
       </Styled.Form>
     </Layout>
   );
@@ -127,7 +127,18 @@ const Styled = {
     border-radius: 0.5rem;
     border: 0.1rem solid #8e8e8e;
     color: #444;
-
-    //appearance: none;
+  `,
+  SelectDisabled: styled.select`
+    display: flex;
+    width: 100%;
+    height: 3.9rem;
+    margin-top: 1.15rem;
+    margin-bottom: 6.4rem;
+    padding: 0.45rem 1.4rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #8e8e8e;
+    background: #ececec;
+    color: #444;
+    pointer-events: none;
   `,
 };
