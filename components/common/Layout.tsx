@@ -27,7 +27,7 @@ const Styled = {
     justify-content: space-around;
     align-items: center;
     min-width: 37.5rem;
-    min-height: 100%;
+    min-height: 81.2rem;
     background: white;
   `,
   Main: styled.main`
