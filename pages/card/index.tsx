@@ -35,6 +35,7 @@ export default function Card() {
 
 const Styled = {
   Title: styled.h1`
+    margin-top: 10.5rem;
     text-align: center;
     font-size: 2.1rem;
     font-weight: 500;

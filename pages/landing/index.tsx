@@ -14,6 +14,7 @@ export default function Lading() {
 
 const Styled = {
   Emoji: styled.h1`
+    margin-top: 31.3rem;
     text-align: center;
     text-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
     font-size: 12rem;

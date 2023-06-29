@@ -5,32 +5,25 @@ import Image from 'next/image';
 import { AirpodImg } from '../../assets';
 import Progress from '../../components/common/Progress';
 
-type FundObjectType = {
-  name: string;
-  goalPrice: number;
-  totalPrice: number;
-};
-
-export default function Detail() {
-  const [funderName, setFunderName] = useState<string>('000');
-  const [fund, setFund] = useState<FundObjectType>({
-    name: 'Apple 에어팟 맥스',
-    goalPrice: 700000,
-    totalPrice: 320000,
-  });
-  const [itemImages, setItemImages] = useState<string[]>([AirpodImg, AirpodImg, AirpodImg]);
+export default function Complete() {
+  const [hostname, setHostname] = useState<string>('000');
   const [pageIndex, setPageIndex] = useState<number>(0);
+  const [totalPrice, setTotalPrice] = useState<number>(420000);
+  const [goalPrice, setGoalPrice] = useState<number>(700000);
+
   return (
-    <Layout buttons={['펀딩에 참여할래요']}>
+    <Layout buttons={['친구에게 알려주기', '내 펀팅 만들러가기']}>
       <Styled.Titles>
-        <Styled.Title>{funderName}님은</Styled.Title>
-        <Styled.BoldTitle>{fund.name}</Styled.BoldTitle>
-        <Styled.Title>를(을) 갖고싶어해요</Styled.Title>
+        <Styled.Title>펀딩참여 완료!</Styled.Title>
+        <Styled.BoldTitle>Apple 에어팟 맥스</Styled.BoldTitle>
+        <Styled.Title>
+          {totalPrice === goalPrice ? `${hostname}님께 전달될 예정이에요` : '까지 얼마남지 않았어요'}
+        </Styled.Title>
       </Styled.Titles>
       <Styled.Images>
         <Styled.ImageContainer>
           <Image
-            src={itemImages[pageIndex]}
+            src={AirpodImg}
             alt="펀딩아이템 이미지"
             width={222}
             height={222}
@@ -40,15 +33,15 @@ export default function Detail() {
           />
         </Styled.ImageContainer>
         <Styled.PagingButtons>
-          {itemImages.map((item, index) =>
+          {[AirpodImg].map((item, index) =>
             index === pageIndex ? <Styled.PagingButtonSelected key={index} /> : <Styled.PagingButton key={index} />
           )}
         </Styled.PagingButtons>
       </Styled.Images>
       <Styled.ProgressContainer>
         <Styled.ProgressTitle>현재까지 모인 금액</Styled.ProgressTitle>
-        <Styled.ProgressAmount>￦ {fund.totalPrice}</Styled.ProgressAmount>
-        <Progress totalPrice={fund.totalPrice} goalPrice={fund.goalPrice} />
+        <Styled.ProgressAmount>￦ {totalPrice}</Styled.ProgressAmount>
+        <Progress totalPrice={totalPrice} goalPrice={goalPrice} />
       </Styled.ProgressContainer>
     </Layout>
   );

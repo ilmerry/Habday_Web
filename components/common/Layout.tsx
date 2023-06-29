@@ -12,7 +12,7 @@ export default function Layout(props: LayoutProps) {
   return (
     <Styled.Root>
       <Styled.Main>{children}</Styled.Main>
-      <Styled.Footer>
+      <Styled.Footer isButtons={buttons?.length === 2}>
         {buttons && buttons?.length == 2 && <Styled.ButtonLeft>{buttons[1]}</Styled.ButtonLeft>}
         {buttons && buttons?.length >= 1 && <Styled.Button>{buttons[0]}</Styled.Button>}
         {link && <Styled.Link>{link}</Styled.Link>}
@@ -34,13 +34,12 @@ const Styled = {
   Main: styled.main`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     min-height: 67.2rem;
   `,
-  Footer: styled.footer`
+  Footer: styled.footer<{ isButtons: boolean }>`
     display: flex;
-    flex-direction: row;
+    flex-direction: ${({ isButtons }) => (isButtons ? 'row' : 'column')};
     justify-content: space-between;
     align-items: center;
     min-width: 32rem;
