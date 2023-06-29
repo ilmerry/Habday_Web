@@ -122,6 +122,7 @@ const Styled = {
   `,
   ProgressAmount: styled.h3`
     margin-top: 0.9rem;
+    margin-bottom: 3rem;
     font-size: 2.4rem;
     font-weight: 500;
     letter-spacing: -0.03rem;

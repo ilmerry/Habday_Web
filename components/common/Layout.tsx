@@ -26,8 +26,8 @@ const Styled = {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 37.5rem;
-    height: 100%;
+    min-width: 37.5rem;
+    min-height: 100%;
     background: white;
   `,
   Main: styled.main`

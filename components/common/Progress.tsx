@@ -12,11 +12,12 @@ interface ProgressProps {
 
 export default function Progress(props: ProgressProps) {
   const { totalPrice, goalPrice, amount, isPing } = props;
+
   return (
     <Styled.Root>
       {isPing && (
-        <Styled.Ping>
-          <Styled.Box>{amount}</Styled.Box>
+        <Styled.Ping location={((totalPrice - goalPrice) / goalPrice) * 100}>
+          <Styled.Box>{amount} 원</Styled.Box>
           <Image
             src={PingArrowImg}
             alt="툴팁화살표 이미지"
@@ -38,18 +39,36 @@ const Styled = {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
   `,
-  Ping: styled.div``,
+  Ping: styled.div<{ location: number }>`
+    //transform: translateX(location);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 5.2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    height: 2.6rem;
+  `,
   Box: styled.div`
+    padding: 0.4rem 0.6rem;
     border-bottom: 0.4rem;
-    background: var(--light-ui-09, #333);
+    background: #333;
+    border-radius: 0.4rem;
+    border: 0;
+    box-shadow: 0.2rem 0.6rem 1.2rem 0rem rgba(0, 0, 0, 0.12), 0rem 0rem 0.4rem 0rem rgba(0, 0, 0, 0.12);
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.06rem;
   `,
   Progressbar: styled.progress`
     height: 0.7rem;
     width: 100%;
-    margin-top: 3rem;
     border-radius: 0.5rem;
     &::-webkit-progress-bar {
       background: #dadada;

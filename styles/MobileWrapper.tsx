@@ -14,6 +14,6 @@ const Styled = {
     margin: 0 auto;
 
     min-width: 37.5rem;
-    height: 81.2rem;
+    min-height: 100%;
   `,
 };
