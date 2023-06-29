@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Layout from '../../components/common/Layout';
 import Image from 'next/image';
 import { AirpodImg } from '../../assets';
+import Progress from '../../components/common/Progress';
 
 type FundObjectType = {
   name: string;
@@ -47,8 +48,7 @@ export default function Detail() {
       <Styled.ProgressContainer>
         <Styled.ProgressTitle>현재까지 모인 금액</Styled.ProgressTitle>
         <Styled.ProgressAmount>￦ {fund.totalPrice}</Styled.ProgressAmount>
-        <Styled.Progressbar value={(fund.totalPrice / fund.goalPrice) * 100} max={100} />
-        <Styled.ProgressLabel>총 {fund.goalPrice}원</Styled.ProgressLabel>
+        <Progress totalPrice={fund.totalPrice} goalPrice={fund.goalPrice} />
       </Styled.ProgressContainer>
     </Layout>
   );
@@ -112,6 +112,7 @@ const Styled = {
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
+    min-width: 28.1rem;
     text-align: center;
   `,
   ProgressTitle: styled.h2`
@@ -124,26 +125,5 @@ const Styled = {
     font-size: 2.4rem;
     font-weight: 500;
     letter-spacing: -0.03rem;
-  `,
-  Progressbar: styled.progress`
-    height: 0.7rem;
-    min-width: 28.1rem;
-    margin-top: 3rem;
-    border-radius: 0.5rem;
-    &::-webkit-progress-bar {
-      background: #dadada;
-      border-radius: 0.5rem;
-    }
-    &::-webkit-progress-value {
-      background: #030b0d;
-      border-radius: 0.5rem;
-    }
-  `,
-  ProgressLabel: styled.label`
-    width: 100%;
-    text-align: right;
-    font-size: 0.9rem;
-    line-height: 1.8rem;
-    color: #707070;
   `,
 };
