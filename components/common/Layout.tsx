@@ -13,7 +13,8 @@ export default function Layout(props: LayoutProps) {
     <Styled.Root>
       <Styled.Main>{children}</Styled.Main>
       <Styled.Footer>
-        {buttons && <Styled.Button>{buttons[0]}</Styled.Button>}
+        {buttons && buttons?.length == 2 && <Styled.ButtonLeft>{buttons[1]}</Styled.ButtonLeft>}
+        {buttons && buttons?.length >= 1 && <Styled.Button>{buttons[0]}</Styled.Button>}
         {link && <Styled.Link>{link}</Styled.Link>}
       </Styled.Footer>
     </Styled.Root>
@@ -39,21 +40,35 @@ const Styled = {
   `,
   Footer: styled.footer`
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    min-width: 32rem;
     margin-bottom: 5.4rem;
   `,
   Button: styled.button`
-    width: 32rem;
+    width: 100%;
     height: 5.2rem;
-    border-radius: 1rem;
+    border-radius: 0.6rem;
     background: black;
     text-align: center;
     color: white;
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 0.052rem;
+    cursor: pointer;
+  `,
+  ButtonLeft: styled.button`
+    width: 100%;
+    height: 5.2rem;
+    border-radius: 0.6rem;
+    background: rgba(218, 218, 218, 1);
+    margin-right: 0.9rem;
+    text-align: center;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 0.052rem;
     cursor: pointer;
   `,
   Link: styled.a`
